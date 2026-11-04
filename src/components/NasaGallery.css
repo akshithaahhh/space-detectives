@@ -1,0 +1,83 @@
+.nasa-gallery {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  color: white;
+}
+
+.nasa-gallery-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nasa-gallery-heading span {
+  color: #48e5e5;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.nasa-gallery-heading h2 {
+  margin: 12px 0;
+}
+
+.nasa-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.nasa-image-card {
+  overflow: hidden;
+  border: 1px solid rgba(90, 220, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(15, 45, 95, 0.8);
+}
+
+.nasa-image-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.nasa-image-info {
+  padding: 16px;
+}
+
+.nasa-image-info h3 {
+  font-size: 16px;
+}
+
+.nasa-image-info p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.nasa-image-info small {
+  display: block;
+  margin: 12px 0;
+  color: #9ddfe9;
+}
+
+.nasa-image-info a {
+  color: #55e8e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nasa-image-info a:hover {
+  text-decoration: underline;
+}
+
+.nasa-gallery-credit {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .nasa-gallery {
+    width: 94%;
+  }
+}

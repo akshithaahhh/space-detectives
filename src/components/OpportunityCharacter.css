@@ -1,0 +1,343 @@
+.opportunity-story {
+  width: 100%;
+  margin: 45px auto;
+  padding: 35px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(145deg, #252044, #482b3c);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.opportunity-intro {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.opportunity-label {
+  color: #ffc477;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.opportunity-intro h2 {
+  margin: 12px 0;
+  font-size: clamp(25px, 4vw, 36px);
+}
+
+.opportunity-intro p {
+  color: #e2d7e5;
+  line-height: 1.7;
+}
+
+.opportunity-character-area {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.opportunity-character {
+  position: relative;
+  width: 270px;
+  height: 245px;
+  animation: opportunity-float 3s ease-in-out infinite;
+}
+
+/* Camera mast */
+
+.opportunity-mast {
+  position: absolute;
+  width: 9px;
+  height: 43px;
+  left: 130px;
+  top: 5px;
+  background: #c7c4b7;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+.opportunity-camera {
+  position: absolute;
+  width: 48px;
+  height: 32px;
+  top: -22px;
+  left: -19px;
+  border: 4px solid #aab2b3;
+  border-radius: 12px;
+  background: #465360;
+  display: grid;
+  place-items: center;
+}
+
+.opportunity-lens {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #a9f5ff, #137d9c 60%, #172e50);
+  box-shadow: 0 0 10px #65dcff;
+}
+
+/* Face */
+
+.opportunity-head {
+  position: absolute;
+  top: 43px;
+  left: 83px;
+  width: 105px;
+  height: 75px;
+  background: linear-gradient(145deg, #eee6d3, #aaa99a);
+  border: 4px solid #77786f;
+  border-radius: 22px;
+  z-index: 4;
+  box-shadow: 0 6px 12px #0005;
+}
+
+.opportunity-eye {
+  position: absolute;
+  top: 17px;
+  width: 24px;
+  height: 27px;
+  border: 2px solid #34404a;
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.opportunity-eye-left {
+  left: 17px;
+}
+
+.opportunity-eye-right {
+  right: 17px;
+}
+
+.opportunity-eye span {
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background: #26374b;
+}
+
+.opportunity-mouth {
+  position: absolute;
+  width: 25px;
+  height: 7px;
+  left: 36px;
+  bottom: 8px;
+  border-radius: 50%;
+  background: #773d38;
+}
+
+.opportunity-talking .opportunity-mouth {
+  animation: opportunity-talk 0.35s infinite alternate;
+}
+
+/* Solar panel */
+
+.opportunity-solar-panel {
+  position: absolute;
+  top: 120px;
+  left: 27px;
+  width: 216px;
+  height: 64px;
+  padding: 5px;
+  border: 4px solid #b3b8b2;
+  border-radius: 7px;
+  background: #283e57;
+  z-index: 2;
+}
+
+.opportunity-panel-grid {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(90deg, transparent 24%, #9bb2c5 25%, transparent 27%, transparent 49%, #9bb2c5 50%, transparent 52%, transparent 74%, #9bb2c5 75%, transparent 77%),
+    linear-gradient(0deg, transparent 45%, #9bb2c5 47%, transparent 50%),
+    #365b7d;
+}
+
+/* Rover body */
+
+.opportunity-body {
+  position: absolute;
+  top: 170px;
+  left: 69px;
+  width: 135px;
+  height: 54px;
+  border: 4px solid #777c77;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #e7dfc9, #a8a89a);
+  z-index: 3;
+  box-shadow: 0 7px 12px #0005;
+}
+
+.opportunity-body span {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  color: #37434c;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.opportunity-body-top {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  top: 6px;
+  left: 49px;
+  border-radius: 5px;
+  background: #8a938e;
+}
+
+.opportunity-body-light {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8affb7;
+  box-shadow: 0 0 8px #8affb7;
+}
+
+/* Six wheels */
+
+.opportunity-wheels {
+  position: absolute;
+  top: 190px;
+  left: 17px;
+  width: 236px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.opportunity-wheel {
+  width: 29px;
+  height: 51px;
+  border: 4px solid #303a42;
+  border-radius: 11px;
+  background: repeating-linear-gradient(
+    0deg,
+    #444e55 0px,
+    #444e55 6px,
+    #899196 7px,
+    #899196 10px
+  );
+  display: grid;
+  place-items: center;
+}
+
+.opportunity-wheel div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d5d5ca;
+}
+
+.opportunity-shadow {
+  width: 185px;
+  height: 18px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #0005;
+  filter: blur(7px);
+}
+
+/* Speech bubble */
+
+.opportunity-speech-bubble {
+  display: inline-block;
+  max-width: 90%;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 18px;
+  background: white;
+  color: #392b48;
+  font-weight: 600;
+  box-shadow: 0 5px 15px #0003;
+}
+
+/* Controls */
+
+.opportunity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.opportunity-controls button {
+  padding: 12px 18px;
+  border: 1px solid #ffffff35;
+  border-radius: 25px;
+  background: #66517f;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.opportunity-controls button:hover {
+  background: #8970a5;
+  transform: translateY(-3px);
+}
+
+.opportunity-controls .opportunity-play {
+  background: #f5ad5d;
+  color: #34213b;
+}
+
+.opportunity-controls .opportunity-play:hover {
+  background: #ffd08b;
+}
+
+/* Animations */
+
+@keyframes opportunity-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes opportunity-talk {
+  from {
+    width: 23px;
+    height: 5px;
+  }
+  to {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .opportunity-story {
+    padding: 25px 12px;
+  }
+
+  .opportunity-character-area {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .opportunity-controls button {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,667 @@
+.mars-page {
+  min-height: 100vh;
+  padding: 65px 7%;
+  color: #f4f5ff;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, #252d5c, transparent 35%),
+    linear-gradient(135deg, #080d25, #111b3c, #071126);
+}
+
+.mars-header {
+  margin-bottom: 65px;
+}
+
+.mars-planet {
+  font-size: 65px;
+  margin-bottom: 10px;
+}
+
+.mars-header h1 {
+  color: #ff786d;
+  font-size: clamp(36px, 5vw, 58px);
+  margin: 0 0 12px;
+}
+
+.mars-header p {
+  color: #c4cce5;
+  font-size: 17px;
+}
+
+.mars-section-heading {
+  margin-bottom: 35px;
+}
+
+.mars-section-heading span,
+.case-label {
+  color: #65d9ed;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.mars-section-heading h2 {
+  font-size: 34px;
+  margin: 12px 0;
+}
+
+.mars-section-heading p {
+  color: #b9c4df;
+}
+
+.mars-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 35px auto;
+}
+
+.mars-mission-card {
+  padding: 35px 28px;
+  border: 1px solid rgba(132, 166, 255, 0.25);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.mars-mission-card:hover {
+  transform: translateY(-8px);
+  border-color: #63d8ed;
+}
+
+.mars-mission-number {
+  color: #7ddff0;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.mars-mission-emoji {
+  font-size: 55px;
+  margin: 18px 0;
+}
+
+.mars-mission-card h3 {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.mars-mission-card p {
+  color: #c5cee5;
+  line-height: 1.7;
+  min-height: 80px;
+}
+
+.mars-button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 27px;
+  margin-top: 18px;
+  color: #071126;
+  background: linear-gradient(90deg, #54d7e9, #8b9cff);
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mars-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 22px rgba(84, 215, 233, 0.3);
+}
+
+.mars-case-file {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid rgba(132, 166, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.case-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mars-case-file h2 {
+  font-size: 34px;
+  margin: 28px 0 8px;
+}
+
+.case-period {
+  color: #72dced;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.mars-image-container {
+  margin: 30px auto;
+}
+
+.mars-rover-image {
+  width: 100%;
+  max-width: 650px;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #080d25;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.mars-image-container figcaption {
+  color: #aebbd9;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.case-description {
+  color: #d4dcef;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 25px auto;
+}
+
+.mars-facts,
+.mars-mystery {
+  text-align: left;
+  padding: 24px;
+  margin: 25px 0;
+  border-radius: 17px;
+  background: rgba(9, 17, 44, 0.7);
+}
+
+.mars-facts h3,
+.mars-mystery h3 {
+  color: #6edcf0;
+  font-size: 21px;
+  margin-top: 0;
+}
+
+.mars-facts ul {
+  padding-left: 22px;
+}
+
+.mars-facts li {
+  color: #d4dcef;
+  line-height: 1.9;
+  margin-bottom: 8px;
+}
+
+.mars-mystery p {
+  color: #d4dcef;
+  line-height: 1.8;
+}
+
+.back-button {
+  margin: 20px 0;
+}
+
+.mars-source {
+  color: #aebbd9;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.mars-source a {
+  color: #70dced;
+}
+
+@media (max-width: 700px) {
+  .mars-page {
+    padding: 45px 5%;
+  }
+
+  .mars-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mars-case-file {
+    padding: 22px;
+  }
+
+  .mars-case-file h2 {
+    font-size: 27px;
+  }
+
+  .mars-rover-image {
+    height: 250px;
+  }
+
+  .case-label {
+    justify-content: center;
+  }
+}
+/* DETECTIVE SCORE */
+
+.detective-score {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #ffe58a;
+  font-weight: bold;
+}
+
+/* SECRET CLUE */
+
+.detective-clue,
+.mars-quiz {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.detective-clue h3,
+.mars-quiz h3 {
+  color: #70e5ff;
+  margin-bottom: 15px;
+}
+
+.revealed-clue {
+  padding: 18px;
+  color: #ffe58a;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* QUIZ */
+
+.quiz-question {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.quiz-option {
+  padding: 14px;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.quiz-option:hover:not(:disabled) {
+  background: rgba(65, 205, 235, 0.2);
+}
+
+.quiz-option.selected {
+  border: 2px solid #55d9f5;
+  background: rgba(65, 205, 235, 0.2);
+}
+
+.quiz-option.correct {
+  border: 2px solid #58dc91;
+  background: rgba(50, 200, 110, 0.2);
+}
+
+.quiz-option.incorrect {
+  border: 2px solid #ff7777;
+  background: rgba(255, 70, 70, 0.2);
+}
+
+.quiz-result {
+  margin-top: 22px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  line-height: 1.6;
+}
+
+.quiz-result h4 {
+  color: #ffe58a;
+  font-size: 20px;
+}
+
+.mars-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+
+  .detective-clue,
+  .mars-quiz {
+    padding: 18px;
+  }
+}
+.secret-clue,
+.mars-quiz {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(70, 180, 255, 0.12);
+  border: 1px solid rgba(100, 210, 255, 0.25);
+}
+
+.secret-clue h3,
+.mars-quiz h3 {
+  color: #65e5ed;
+  margin-bottom: 12px;
+}
+
+.secret-clue p,
+.mars-quiz p {
+  line-height: 1.7;
+}
+
+.quiz-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.quiz-option {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: 1px solid #45c9e8;
+  background: #102d55;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.quiz-option:hover {
+  background: #087fae;
+  transform: translateY(-3px);
+}
+
+.quiz-option.selected {
+  background: #087fae;
+}
+
+.quiz-feedback {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.quiz-feedback.correct {
+  background: rgba(35, 190, 120, 0.18);
+  color: #78f0b2;
+}
+
+.quiz-feedback.incorrect {
+  background: rgba(255, 90, 90, 0.15);
+  color: #ffaaaa;
+}
+
+.mars-image-container {
+  margin: 25px auto;
+  text-align: center;
+}
+
+.mars-rover-image {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: 300px;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 15px;
+  background: #071329;
+}
+
+.mars-image-container figcaption {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b5cce5;
+}
+
+@media (max-width: 600px) {
+  .quiz-options {
+    flex-direction: column;
+  }
+
+  .quiz-option {
+    width: 100%;
+  }
+
+  .mars-rover-image {
+    height: 220px;
+  }
+}
+/* CUTE TALKING MARS CHARACTER */
+
+.mars-character-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 30px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #8f321f, #d75b35, #a83d2c);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.mars-character {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffb17b, #ec663f 55%, #a93427);
+  box-shadow:
+    inset -12px -15px 25px rgba(95, 25, 20, 0.3),
+    0 0 35px rgba(255, 130, 80, 0.4);
+  animation: marsFloat 3s ease-in-out infinite;
+}
+
+.mars-character::before,
+.mars-character::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(120, 45, 35, 0.2);
+}
+
+.mars-character::before {
+  width: 30px;
+  height: 20px;
+  top: 35px;
+  left: 35px;
+}
+
+.mars-character::after {
+  width: 22px;
+  height: 16px;
+  bottom: 40px;
+  right: 32px;
+}
+
+.mars-face {
+  position: relative;
+  width: 110px;
+  height: 75px;
+}
+
+.mars-eye {
+  position: absolute;
+  top: 18px;
+  width: 12px;
+  height: 16px;
+  border-radius: 50%;
+  background: #54231e;
+}
+
+.mars-eye-left {
+  left: 22px;
+}
+
+.mars-eye-right {
+  right: 22px;
+}
+
+.mars-cheek {
+  position: absolute;
+  top: 39px;
+  width: 17px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ffaaa0;
+}
+
+.mars-cheek-left {
+  left: 5px;
+}
+
+.mars-cheek-right {
+  right: 5px;
+}
+
+.mars-mouth {
+  position: absolute;
+  left: 50%;
+  top: 43px;
+  width: 20px;
+  height: 10px;
+  border-bottom: 3px solid #54231e;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.mars-speaking .mars-mouth {
+  animation: marsTalk 0.25s infinite alternate;
+}
+
+.mars-character-stars {
+  position: absolute;
+  top: 5px;
+  right: -12px;
+  font-size: 30px;
+  animation: marsSparkle 1.5s infinite alternate;
+}
+
+.mars-character-message {
+  flex: 1;
+  text-align: center;
+}
+
+.mars-character-label {
+  display: inline-block;
+  color: #ffd3b5;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.mars-character-message h2 {
+  margin: 12px 0;
+  color: #fff1e8;
+}
+
+.mars-caption {
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.mars-voice-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.mars-voice-button {
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mars-voice-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.mars-voice-note {
+  margin-top: 13px;
+  color: #ffe0cc;
+  font-size: 12px;
+}
+
+@keyframes marsFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes marsTalk {
+  from {
+    height: 5px;
+  }
+  to {
+    height: 17px;
+  }
+}
+
+@keyframes marsSparkle {
+  from {
+    transform: scale(0.8) rotate(-10deg);
+  }
+  to {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .mars-character-section {
+    flex-direction: column;
+    padding: 25px 18px;
+    gap: 20px;
+  }
+
+  .mars-character {
+    width: 155px;
+    height: 155px;
+  }
+
+  .mars-character-message {
+    width: 100%;
+  }
+}

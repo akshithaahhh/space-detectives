@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #070b20;
+  color: white;
+  min-width: 320px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 75% 25%, #123f85 0%, transparent 45%),
+    linear-gradient(135deg, #080d24, #102b5c);
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 23px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.logo-icon {
+  font-size: 26px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #dce8ff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #55edff;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero {
+  max-width: 1250px;
+  margin: auto;
+  min-height: 620px;
+  padding: 75px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 590px;
+  position: relative;
+  z-index: 2;
+}
+
+.mission-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 20px;
+  border: 1px solid #4985d6;
+  border-radius: 30px;
+  background: rgba(40, 111, 195, 0.18);
+  color: #9beaff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 6vw, 75px);
+  line-height: 1.1;
+  font-weight: 900;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #35e6ed;
+  text-shadow: 0 0 30px rgba(53, 230, 237, 0.25);
+}
+
+.hero-description {
+  max-width: 520px;
+  color: #c3d8f5;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.start-button {
+  border: none;
+  border-radius: 16px;
+  padding: 17px 28px;
+  background: linear-gradient(135deg, #28d9e8, #4389ed);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(40, 217, 232, 0.25);
+  transition: 0.3s;
+}
+
+.start-button:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 12px 35px rgba(40, 217, 232, 0.4);
+}
+
+.hero-note {
+  margin-top: 24px;
+  color: #a9c9ef;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* HERO SPACE CHARACTER */
+
+.hero-visual {
+  width: 440px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.space-orbit {
+  position: absolute;
+  border: 1px solid rgba(118, 190, 255, 0.35);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 330px;
+  height: 330px;
+  transform: rotate(-25deg);
+}
+
+.orbit-two {
+  width: 400px;
+  height: 220px;
+  transform: rotate(35deg);
+}
+
+.astronaut-character {
+  font-size: 155px;
+  z-index: 2;
+  filter: drop-shadow(0 0 35px rgba(77, 204, 255, 0.5));
+  animation: astronautFloat 4s ease-in-out infinite;
+}
+
+@keyframes astronautFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-22px) rotate(5deg);
+  }
+}
+
+.floating-planet {
+  position: absolute;
+  z-index: 3;
+  animation: planetFloat 5s ease-in-out infinite;
+}
+
+.moon-decoration {
+  font-size: 65px;
+  top: 35px;
+  left: 35px;
+}
+
+.mars-decoration {
+  font-size: 65px;
+  right: 15px;
+  bottom: 55px;
+  animation-delay: 1s;
+}
+
+.star-decoration {
+  font-size: 38px;
+  top: 60px;
+  right: 55px;
+}
+
+@keyframes planetFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.astronaut-message {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #163e75;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+
+.floating-star {
+  position: absolute;
+  font-size: 25px;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.star-one {
+  top: 145px;
+  left: 10px;
+}
+
+.star-two {
+  bottom: 130px;
+  right: 30px;
+  animation-delay: 0.7s;
+}
+
+.star-three {
+  top: 15px;
+  right: 145px;
+  animation-delay: 1.2s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.hero-stars span {
+  position: absolute;
+  color: #b8eaff;
+  animation: sparkle 3s infinite;
+}
+
+.hero-stars span:nth-child(1) {
+  top: 12%;
+  left: 8%;
+}
+
+.hero-stars span:nth-child(2) {
+  top: 45%;
+  left: 3%;
+}
+
+.hero-stars span:nth-child(3) {
+  top: 18%;
+  right: 5%;
+}
+
+.hero-stars span:nth-child(4) {
+  bottom: 10%;
+  left: 45%;
+}
+
+.hero-stars span:nth-child(5) {
+  top: 75%;
+  right: 12%;
+}
+
+.hero-stars span:nth-child(6) {
+  top: 8%;
+  left: 55%;
+}
+
+/* PLANET SECTION */
+
+.planet-section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 90px 30px;
+  text-align: center;
+}
+
+.section-heading span {
+  color: #55e5f5;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 17px 0;
+}
+
+.section-heading p {
+  color: #b8cbe9;
+  margin-bottom: 45px;
+  font-size: 16px;
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.planet-card {
+  padding: 35px;
+  border: 1px solid rgba(135, 193, 255, 0.3);
+  border-radius: 28px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.moon-card {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(90, 201, 255, 0.3), transparent 45%),
+    linear-gradient(135deg, #174e91, #17366e);
+}
+
+.mars-card {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 148, 91, 0.3), transparent 45%),
+    linear-gradient(135deg, #874b59, #39285e);
+}
+
+.planet-card:hover {
+  transform: translateY(-12px);
+  border-color: #70eaff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.planet-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c8e9ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.planet-icon {
+  font-size: 85px;
+  text-align: center;
+  margin: 28px 0;
+}
+
+.moon-floating {
+  animation: planetFloat 5s ease-in-out infinite;
+}
+
+.mars-floating {
+  animation: planetFloat 5s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.planet-card h3 {
+  font-size: 27px;
+  margin-bottom: 13px;
+}
+
+.planet-card p {
+  color: #e0eaff;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.planet-card button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #173d75;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.planet-card button:hover {
+  background: #42e1ed;
+  color: #07152f;
+  transform: translateX(5px);
+}
+
+/* ADVENTURE SECTION */
+
+.adventure-section {
+  max-width: 1100px;
+  margin: 30px auto 80px;
+  padding: 55px 30px;
+  border: 1px solid rgba(105, 190, 255, 0.3);
+  border-radius: 30px;
+  background: linear-gradient(
+    120deg,
+    rgba(27, 72, 139, 0.8),
+    rgba(36, 41, 105, 0.8)
+  );
+  text-align: center;
+}
+
+.adventure-content > span {
+  color: #6de9f5;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.adventure-content h2 {
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.adventure-content p {
+  max-width: 700px;
+  margin: auto;
+  color: #d0e1fa;
+  line-height: 1.8;
+}
+
+.adventure-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.adventure-steps div {
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: #e6f5ff;
+}
+
+/* ABOUT */
+
+.about-section {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 65px 30px;
+  text-align: center;
+}
+
+.about-emoji {
+  font-size: 60px;
+  animation: planetFloat 4s ease-in-out infinite;
+}
+
+.about-section h2 {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.about-section p {
+  color: #c1d0e9;
+  line-height: 1.9;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  background: #060a19;
+  color: #b9c9e5;
+}
+
+.footer-logo {
+  font-size: 19px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+footer small {
+  color: #7fa8d8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 65px 20px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 440px;
+    height: 380px;
+  }
+
+  .planet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adventure-section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-visual {
+    transform: scale(0.85);
+    margin: -20px 0;
+  }
+
+  .planet-section {
+    padding: 65px 20px;
+  }
+
+  .planet-card {
+    padding: 25px;
+  }
+
+  .adventure-content h2 {
+    font-size: 26px;
+  }
+}
+
+/* EXISTING INVESTIGATION PAGE STYLES */
+
+.planet-page {
+  min-height: 100vh;
+  padding: 100px 8% 60px;
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle at top, #182b58, #050817 75%);
+}
+
+.planet-page h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #8be9ff;
+}
+
+.planet-page > p {
+  font-size: 18px;
+  color: #c5d5ee;
+  margin-bottom: 35px;
+}
+
+.planet-page h2 {
+  margin: 30px 0;
+  font-size: 28px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 35px auto;
+}
+
+.mission-card {
+  padding: 30px;
+  border: 1px solid #496a9e;
+  border-radius: 20px;
+  background: rgba(30, 49, 87, 0.65);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  border-color: #71dcff;
+}
+
+.mission-card h3 {
+  font-size: 22px;
+  color: #9ceaff;
+}
+
+.mission-card p {
+  line-height: 1.7;
+  color: #d3def0;
+}
+
+.mission-card button,
+.planet-page button {
+  padding: 12px 22px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  background: #4389ed;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.mission-card button:hover,
+.planet-page button:hover {
+  background: #2364c5;
+}
+
+@media (max-width: 768px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planet-page h1 {
+    font-size: 30px;
+  }
+}
+/* ASTRO - JUNIOR SPACE DETECTIVE */
+
+.astronaut-character {
+  animation: astroFloat 3s ease-in-out infinite;
+  cursor: default;
+  z-index: 2;
+}
+
+@keyframes astroFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(4deg);
+  }
+}
+
+.astronaut-message {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.astro-voice-button {
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 25px;
+  background: linear-gradient(135deg, #7057ff, #a34dff);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.astro-voice-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(112,87,255,0.4);
+}
+
+.astro-voice-button:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .hero-visual {
+    margin: 20px auto 0;
+    width: 100%;
+  }
+
+  .astronaut-character {
+    font-size: 100px;
+  }
+
+  .astronaut-message {
+    font-size: 14px;
+  }
+}

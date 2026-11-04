@@ -1,0 +1,341 @@
+.moonbuggy-story {
+  width: 100%;
+  margin: 30px auto;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #17213e, #34305a, #55416d);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.moonbuggy-intro {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.moonbuggy-label {
+  display: inline-block;
+  color: #ffe29a;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.moonbuggy-intro h2 {
+  color: #fff2c9;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin: 8px 0;
+}
+
+.moonbuggy-intro p {
+  color: #e5e0f5;
+  line-height: 1.7;
+}
+
+.moonbuggy-character-area {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+.moonbuggy-character {
+  position: relative;
+  width: 270px;
+  height: 215px;
+  animation: moonbuggy-float 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.moonbuggy-antenna {
+  position: absolute;
+  width: 5px;
+  height: 35px;
+  background: #d6d4c9;
+  left: 50%;
+  top: 0;
+  border-radius: 5px;
+}
+
+.moonbuggy-camera {
+  position: absolute;
+  width: 43px;
+  height: 35px;
+  left: 47%;
+  top: 23px;
+  background: #b7a98b;
+  border: 4px solid #eee0bb;
+  border-radius: 10px;
+  z-index: 4;
+}
+
+.moonbuggy-camera-lens {
+  width: 15px;
+  height: 15px;
+  margin: 6px auto;
+  border-radius: 50%;
+  background: #344d70;
+  border: 3px solid #9fd9e8;
+}
+
+.moonbuggy-head {
+  position: absolute;
+  width: 112px;
+  height: 65px;
+  top: 65px;
+  left: 78px;
+  background: #d8c8a5;
+  border: 4px solid #fff0cc;
+  border-radius: 22px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.moonbuggy-eye {
+  width: 19px;
+  height: 23px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moonbuggy-eye span {
+  width: 9px;
+  height: 12px;
+  background: #26344e;
+  border-radius: 50%;
+}
+
+.moonbuggy-mouth {
+  position: absolute;
+  width: 22px;
+  height: 8px;
+  bottom: 9px;
+  left: 43px;
+  border-bottom: 3px solid #654b42;
+  border-radius: 50%;
+}
+
+.moonbuggy-panel {
+  position: absolute;
+  width: 105px;
+  height: 75px;
+  top: 95px;
+  left: 3px;
+  background: #244d85;
+  border: 5px solid #aebbd2;
+  transform: rotate(-12deg);
+  border-radius: 7px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.moonbuggy-panel-grid {
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(90deg, transparent 46%, #a7c5e8 48%, transparent 51%),
+    linear-gradient(0deg, transparent 46%, #a7c5e8 48%, transparent 51%);
+  background-size: 25px 25px;
+}
+
+.moonbuggy-body {
+  position: absolute;
+  width: 160px;
+  height: 48px;
+  left: 55px;
+  top: 130px;
+  background: linear-gradient(135deg, #e5d6b8, #a99c84);
+  border: 4px solid #f5e6c8;
+  border-radius: 13px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #514c43;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.moonbuggy-body-light {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 5px;
+  right: 10px;
+  background: #ffe58c;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffe58c;
+}
+
+.moonbuggy-frame {
+  position: absolute;
+  width: 175px;
+  height: 7px;
+  top: 180px;
+  left: 47px;
+  background: #c7bba2;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.moonbuggy-wheels {
+  position: absolute;
+  width: 220px;
+  left: 25px;
+  top: 165px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.moonbuggy-wheel {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: repeating-linear-gradient(
+    45deg,
+    #77746e 0px,
+    #77746e 5px,
+    #b4aa96 6px,
+    #b4aa96 9px
+  );
+  border: 4px solid #e1d6c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: moonbuggy-wheel-spin 8s linear infinite;
+}
+
+.moonbuggy-wheel-center {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f5dca8;
+  border: 3px solid #6f685d;
+}
+
+.moonbuggy-shadow {
+  width: 200px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  margin-top: -4px;
+  filter: blur(6px);
+}
+
+.moonbuggy-speech {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff1c5;
+  font-weight: 600;
+  animation: moonbuggy-bubble 2s ease-in-out infinite;
+}
+
+.moonbuggy-talking .moonbuggy-mouth {
+  animation: moonbuggy-talk 0.25s infinite alternate;
+}
+
+.moonbuggy-talking .moonbuggy-head {
+  animation: moonbuggy-head-bounce 0.5s infinite alternate;
+}
+
+.moonbuggy-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.moonbuggy-controls button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 11px 17px;
+  border-radius: 30px;
+  background: #e7d5a8;
+  color: #352e48;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.moonbuggy-controls button:hover {
+  transform: translateY(-3px);
+  background: #fff0c9;
+}
+
+.moonbuggy-controls .moonbuggy-play {
+  background: #f5b95d;
+}
+
+@keyframes moonbuggy-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes moonbuggy-wheel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moonbuggy-talk {
+  from {
+    height: 5px;
+  }
+  to {
+    height: 17px;
+  }
+}
+
+@keyframes moonbuggy-head-bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes moonbuggy-bubble {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .moonbuggy-story {
+    padding: 24px 12px;
+  }
+
+  .moonbuggy-character {
+    transform: scale(0.85);
+    margin: -10px 0;
+  }
+
+  .moonbuggy-controls button {
+    padding: 10px 13px;
+    font-size: 0.85rem;
+  }
+}

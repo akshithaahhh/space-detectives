@@ -1,0 +1,180 @@
+.progress-dashboard {
+  width: min(100% - 32px, 1050px);
+  margin: 35px auto;
+  padding: 28px;
+  background: linear-gradient(135deg, #101d36, #182c4b);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-label {
+  color: #55d6d2;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.dashboard-heading h2 {
+  margin: 8px 0;
+  font-size: 25px;
+}
+
+.dashboard-heading p {
+  color: #b8c8df;
+}
+
+.level-box {
+  min-width: 65px;
+  padding: 12px;
+  text-align: center;
+  background: #263d5e;
+  border-radius: 14px;
+}
+
+.level-box span,
+.level-box strong {
+  display: block;
+}
+
+.level-box span {
+  font-size: 11px;
+  color: #55d6d2;
+}
+
+.level-box strong {
+  font-size: 25px;
+  color: #ffd166;
+}
+
+.score-card {
+  margin-top: 25px;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(120deg, #25466c, #263653);
+  border-radius: 17px;
+}
+
+.score-label {
+  color: #55d6d2;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.score-card h1 {
+  margin: 8px 0;
+  color: #ffd166;
+  font-size: 32px;
+}
+
+.score-card p {
+  margin-bottom: 0;
+  color: #c5d4e8;
+}
+
+.score-icon {
+  font-size: 48px;
+}
+
+.level-progress {
+  margin: 25px 0;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #d5e1f1;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background: #344761;
+  border-radius: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #55d6d2, #ffd166);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.badges-section h3 {
+  margin-bottom: 18px;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.badge-card {
+  min-width: 0;
+  padding: 18px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.badge-card.unlocked {
+  background: #294969;
+  border: 1px solid #55d6d2;
+}
+
+.badge-card.locked {
+  background: #1a2940;
+  border: 1px solid #35435a;
+  opacity: 0.65;
+}
+
+.badge-emoji {
+  font-size: 30px;
+}
+
+.badge-card strong {
+  font-size: 13px;
+}
+
+.badge-card small {
+  color: #b8c8df;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .progress-dashboard {
+    padding: 18px;
+  }
+
+  .dashboard-heading h2 {
+    font-size: 19px;
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .score-card h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,495 @@
+.exploration-section {
+  max-width: 1050px;
+  margin: 75px auto;
+  padding: 0 22px;
+  color: #eaf6ff;
+}
+
+.exploration-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.exploration-heading span {
+  color: #5ceaff;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.exploration-heading h2 {
+  color: white;
+  font-size: clamp(25px, 4vw, 36px);
+  margin: 14px 0;
+}
+
+.exploration-heading p,
+.map-hint {
+  color: #c2dafa;
+  line-height: 1.7;
+}
+
+/* MAP SURFACE */
+
+.planet-map {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  height: 440px;
+  margin: auto;
+  overflow: hidden;
+  isolation: isolate;
+  border: 3px solid rgba(133, 218, 255, 0.65);
+  border-radius: 30px;
+  box-shadow:
+    0 0 25px rgba(49, 190, 255, 0.25),
+    0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* MOON TERRAIN */
+
+.moon-map {
+  background:
+    radial-gradient(circle at 18% 22%,
+      #d5d3ca 0 4%, transparent 4.5%),
+    radial-gradient(circle at 25% 25%,
+      rgba(255,255,255,0.2), transparent 30%),
+    radial-gradient(circle at 20% 70%,
+      #aaa99f 0 5%, transparent 5.5%),
+    radial-gradient(circle at 75% 25%,
+      #777b83 0 7%, transparent 7.5%),
+    radial-gradient(circle at 65% 75%,
+      #c6c1b3 0 8%, transparent 8.5%),
+    radial-gradient(circle at 40% 55%,
+      #898b91 0 4%, transparent 4.5%),
+    linear-gradient(140deg,
+      #c6c4bb, #888c99 55%, #555d73);
+}
+
+/* MARS TERRAIN */
+
+.mars-map {
+  background:
+    radial-gradient(circle at 20% 70%,
+      #803f32 0 7%, transparent 7.5%),
+    radial-gradient(circle at 75% 25%,
+      #e49b70 0 8%, transparent 8.5%),
+    radial-gradient(circle at 65% 75%,
+      #713c35 0 9%, transparent 9.5%),
+    radial-gradient(circle at 40% 50%,
+      #b96d4d 0 5%, transparent 5.5%),
+    linear-gradient(140deg,
+      #dc9871, #a9523f 55%, #642f35);
+}
+
+/* FLOATING STARS */
+
+.map-stars span {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  opacity: 0.8;
+  font-size: 22px;
+  animation: star-twinkle 2.5s ease-in-out infinite alternate;
+}
+
+.map-stars span:nth-child(1) {
+  top: 12%;
+  left: 15%;
+}
+
+.map-stars span:nth-child(2) {
+  top: 20%;
+  right: 20%;
+  animation-delay: 0.5s;
+}
+
+.map-stars span:nth-child(3) {
+  bottom: 25%;
+  left: 35%;
+  animation-delay: 1s;
+}
+
+.map-stars span:nth-child(4) {
+  top: 50%;
+  right: 10%;
+}
+
+.map-stars span:nth-child(5) {
+  bottom: 15%;
+  right: 35%;
+  animation-delay: 0.8s;
+}
+
+.map-stars span:nth-child(6) {
+  top: 35%;
+  left: 50%;
+  animation-delay: 1.2s;
+}
+
+.map-stars span:nth-child(7) {
+  bottom: 40%;
+  left: 12%;
+}
+
+/* CRATERS */
+
+.map-crater {
+  position: absolute;
+  border-radius: 50%;
+  border: 8px solid rgba(50, 43, 48, 0.3);
+  background: rgba(30, 30, 40, 0.2);
+  box-shadow:
+    inset 5px 5px 12px rgba(0,0,0,0.3),
+    3px 4px 8px rgba(255,255,255,0.2);
+  z-index: 0;
+}
+
+.crater-one {
+  width: 85px;
+  height: 85px;
+  top: 15%;
+  left: 25%;
+}
+
+.crater-two {
+  width: 120px;
+  height: 120px;
+  bottom: 12%;
+  right: 18%;
+}
+
+.crater-three {
+  width: 55px;
+  height: 55px;
+  top: 55%;
+  left: 10%;
+}
+
+.crater-four {
+  width: 45px;
+  height: 45px;
+  top: 10%;
+  right: 42%;
+}
+
+.crater-five {
+  width: 65px;
+  height: 65px;
+  bottom: 12%;
+  left: 45%;
+}
+
+/* TERRAIN DECORATIONS */
+
+.map-decoration {
+  position: absolute;
+  z-index: 1;
+  font-size: 35px;
+  opacity: 0.85;
+  animation: decoration-float 4s ease-in-out infinite;
+}
+
+.decoration-one {
+  top: 12%;
+  left: 7%;
+}
+
+.decoration-two {
+  bottom: 17%;
+  right: 7%;
+  animation-delay: 1s;
+}
+
+/* EXPLORATION TRAIL */
+
+.map-trail {
+  position: absolute;
+  z-index: 1;
+  left: 28%;
+  top: 42%;
+  width: 43%;
+  height: 22%;
+  border-bottom: 3px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+
+/* MISSION MARKERS */
+
+.map-marker {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  width: 57px;
+  height: 57px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #35eff0, #1689dc);
+  box-shadow:
+    0 0 0 8px rgba(68, 229, 255, 0.2),
+    0 0 25px rgba(54, 228, 255, 0.8);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: marker-pulse 2s infinite;
+}
+
+.marker-icon {
+  font-size: 25px;
+}
+
+.marker-number {
+  position: absolute;
+  top: -9px;
+  right: -7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffcf58;
+  color: #19274b;
+  font-size: 11px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+}
+
+.marker-label {
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 160px;
+  padding: 5px 9px;
+  border-radius: 10px;
+  background: rgba(5, 19, 48, 0.9);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.map-marker:hover,
+.map-marker.active {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow:
+    0 0 0 12px rgba(255, 222, 100, 0.25),
+    0 0 35px #fff1a3;
+  background: linear-gradient(145deg, #ffe58b, #ffab42);
+}
+
+.map-marker:hover .marker-label,
+.map-marker.active .marker-label {
+  opacity: 1;
+}
+
+/* MAP LABEL */
+
+.map-label {
+  position: absolute;
+  bottom: 17px;
+  left: 18px;
+  z-index: 2;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-shadow: 0 2px 5px #222;
+}
+
+.map-compass {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  text-shadow: 0 2px 5px #222;
+}
+
+/* LOCATION DETAILS */
+
+.map-info {
+  position: relative;
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  background: linear-gradient(135deg, #173e78, #27235f);
+  border: 1px solid rgba(110, 220, 255, 0.5);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  animation: info-appear 0.4s ease;
+}
+
+.map-info-icon {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.map-info-tag {
+  color: #65eaff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.map-info h3 {
+  color: #ffe49c;
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+.map-info p {
+  color: #e0edff;
+  line-height: 1.8;
+}
+
+.map-info .map-location-name {
+  color: #69eaff;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.map-close {
+  padding: 12px 24px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #43e6e5, #55b8ff);
+  color: #071a39;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.map-close:hover {
+  transform: scale(1.05);
+}
+
+/* HINT */
+
+.map-hint {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 700;
+  animation: hint-bounce 2s infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes marker-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 7px rgba(68, 229, 255, 0.2),
+      0 0 20px rgba(54, 228, 255, 0.6);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 13px rgba(68, 229, 255, 0.08),
+      0 0 30px rgba(54, 228, 255, 0.9);
+  }
+}
+
+@keyframes star-twinkle {
+  from {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes decoration-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes info-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hint-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+  .exploration-section {
+    margin: 45px auto;
+    padding: 0 14px;
+  }
+
+  .planet-map {
+    height: 330px;
+    border-radius: 22px;
+  }
+
+  .map-marker {
+    width: 48px;
+    height: 48px;
+  }
+
+  .marker-icon {
+    font-size: 21px;
+  }
+
+  .marker-label {
+    font-size: 9px;
+    max-width: 120px;
+  }
+
+  .map-info {
+    padding: 22px 17px;
+  }
+
+  .map-info h3 {
+    font-size: 20px;
+  }
+
+  .crater-two {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-stars span,
+  .map-decoration,
+  .map-marker,
+  .map-hint {
+    animation: none;
+  }
+}

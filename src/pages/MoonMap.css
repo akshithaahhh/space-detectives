@@ -1,0 +1,196 @@
+.moon-map-section {
+  max-width: 1000px;
+  margin: 65px auto;
+}
+
+.moon-map-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.moon-map-heading span {
+  color: #51d9ee;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.moon-map-heading h2 {
+  color: #fff;
+  font-size: 32px;
+}
+
+.moon-map-heading p {
+  color: #a9c9ef;
+  line-height: 1.7;
+}
+
+.moon-map {
+  padding: 15px;
+  background: rgba(28, 53, 112, 0.65);
+  border: 1px solid rgba(110, 190, 255, 0.25);
+  border-radius: 25px;
+}
+
+.moon-map-surface {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at 30% 25%, #aeb6c5, transparent 35%),
+    radial-gradient(ellipse at 75% 70%, #737e91, transparent 40%),
+    linear-gradient(135deg, #c2c7d0, #737d91, #adb5c3);
+}
+
+.moon-crater {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(50, 59, 77, 0.2);
+  box-shadow: inset 5px 6px 12px rgba(30, 40, 60, 0.25);
+}
+
+.crater-one {
+  width: 100px;
+  height: 100px;
+  top: 15%;
+  left: 65%;
+}
+
+.crater-two {
+  width: 65px;
+  height: 65px;
+  top: 60%;
+  left: 15%;
+}
+
+.crater-three {
+  width: 45px;
+  height: 45px;
+  top: 30%;
+  left: 45%;
+}
+
+.moon-map-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid #fff4d2;
+  background: rgba(255, 207, 117, 0.35);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  transition: 0.25s ease;
+}
+
+.moon-map-marker:hover,
+.moon-map-marker.active {
+  transform: translate(-50%, -50%) scale(1.25);
+  background: rgba(55, 225, 205, 0.75);
+  box-shadow: 0 0 25px #4de0e8;
+}
+
+.marker-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f05270;
+}
+
+.map-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.moon-location-info {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #174b82, #17638b);
+  border: 1px solid rgba(110, 220, 255, 0.3);
+  color: white;
+  animation: mapReveal 0.3s ease;
+}
+
+.location-year {
+  color: #72e8e7;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.moon-location-info h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.moon-location-info h4 {
+  color: #bde8ff;
+  margin-top: 0;
+}
+
+.moon-location-info p {
+  line-height: 1.8;
+  color: #e0efff;
+}
+
+.location-fact {
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 12px;
+  background: rgba(3, 25, 60, 0.3);
+  line-height: 1.6;
+}
+
+.location-close {
+  margin-top: 18px;
+  border: none;
+  border-radius: 25px;
+  padding: 11px 25px;
+  background: #8be4a7;
+  color: #123b4b;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.map-instruction {
+  color: #a9c9ef;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes mapReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .moon-map-surface {
+    height: 280px;
+  }
+
+  .moon-location-info {
+    padding: 20px;
+  }
+
+  .moon-map-heading h2 {
+    font-size: 25px;
+  }
+}
